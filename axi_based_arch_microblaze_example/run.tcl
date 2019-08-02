@@ -145,9 +145,9 @@ connect_bd_intf_net [get_bd_intf_pins clk_wiz_1/CLK_IN1_D] [get_bd_intf_ports CL
 endgroup
 
 startgroup
-create_bd_port -dir I -type rst sys_reset
-set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins clk_wiz_1/reset]] [get_bd_ports sys_reset]
-connect_bd_net [get_bd_pins /clk_wiz_1/reset] [get_bd_ports sys_reset]
+create_bd_port -dir I -type rst sys_rst
+set_property CONFIG.POLARITY [get_property CONFIG.POLARITY [get_bd_pins mig_7series_0/sys_rst]] [get_bd_ports sys_rst]
+connect_bd_net [get_bd_pins /mig_7series_0/sys_rst] [get_bd_ports sys_rst]
 endgroup
 
 connect_bd_net [get_bd_ports sys_rst] [get_bd_pins clk_wiz_1/reset]
